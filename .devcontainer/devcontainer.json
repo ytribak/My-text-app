@@ -1,0 +1,9 @@
+{
+  "name": "Codespaces with Webtop",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "docker run -d --name webtop -e PUID=1000 -e PGID=1000 -p 3000:3000 linuxserver/webtop:ubuntu-xfce",
+  "forwardPorts": [3000]
+}
